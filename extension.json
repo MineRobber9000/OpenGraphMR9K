@@ -1,0 +1,29 @@
+{
+	"name": "OpenGraphMR9K",
+	"author": ["MineRobber9000 <khuxkm@ttm.sh>"],
+	"description": "Adds OpenGraph data to the page.",
+	"requires": {
+		"extensions": {
+			"TextExtracts": "*"
+		}
+	},
+	"manifest_version": 2,
+	"AutoloadNamespaces": {
+		"OpenGraphMR9K\\": "includes/"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "OpenGraphMR9K\\Hooks"
+		}
+	},
+	"config": {
+		"OpenGraphSitename": {
+			"value": "",
+			"description": "The sitename that will appear in OpenGraph embeds.",
+			"public": true
+		}
+	}
+}
